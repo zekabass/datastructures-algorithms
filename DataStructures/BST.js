@@ -14,26 +14,26 @@ module.exports = function(){
         let newNode = new createNode(key);
       
         if (root === null){ 
-          root = newNode;
+            root = newNode;
         } else {
-          insertNode(root, newNode);
+            insertNode(root, newNode);
         }
     }
     
     function insertNode(parent, newNode){    
-      if(newNode.key > parent.key) {
-          if(!parent.right) {
-            parent.right = newNode;
-          } else {
-            insertNode(parent.right, newNode);
-          }
-      } else if(newNode.key < parent.key) {
-          if(!parent.left) {
-            parent.left = newNode;
-          } else {
-            insertNode(parent.left, newNode);
-          }
-      }     
+        if(newNode.key > parent.key) {
+            if(!parent.right) {
+                parent.right = newNode;
+            } else {
+                insertNode(parent.right, newNode);
+            }
+        } else if(newNode.key < parent.key) {
+            if(!parent.left) {
+                parent.left = newNode;
+            } else {
+                insertNode(parent.left, newNode);
+            }
+        }     
     }
   
     this.inOrderTraverse = function(callback){   
