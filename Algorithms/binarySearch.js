@@ -1,6 +1,5 @@
 module.exports = function(arr, item) {
-    arr.sort((a,b)=>a - b);
-      
+    
     var low = 0;
     var high = arr.length - 1;
     var mid;
